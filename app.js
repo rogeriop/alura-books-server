@@ -1,12 +1,11 @@
 const express = require("express");
+const rotasLivro = require("./rotas/livro");
 
 const app = express();
 
-const port = 8000;
+app.use("/livros", rotasLivro);
 
-app.get("/", (req, res) => {
-  res.send("Alô, Mundo");
-});
+const port = 8000;
 
 app.listen(port, () => {
   console.log(`Server rodando em http://localhost:${port}`);
