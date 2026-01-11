@@ -3,6 +3,8 @@ const rotasLivro = require("./rotas/livro");
 
 const app = express();
 
+app.use(express.json());
+
 app.use("/livros", rotasLivro);
 
 const port = 8000;
